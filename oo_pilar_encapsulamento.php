@@ -45,6 +45,13 @@
 
     class Filho extends Pai{
 
+        public function __construct(){
+            //exibir os metodos do objeto]
+            echo "<pre>";
+            print_r(get_class_methods($this));
+
+        }
+
         // public function getAtributo($attr){ 
         //     return $this->$attr;
         // }
@@ -59,8 +66,12 @@
     print_r($filho);
     echo "<pre/>";
     
-    //exibir os metodos do objeto]
-    print_r(get_class_methods($filho))
+    $filho->executarAcao();
+    
+
+
+
+
 
 
     // echo $filho->getAtributo('nome');
